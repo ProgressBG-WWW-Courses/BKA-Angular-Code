@@ -1,6 +1,2 @@
-**/node_modules/
-
-**/logs/**
-**/nohup*
-
-.private/**
+**/node-modules/*
+**/.private/*
