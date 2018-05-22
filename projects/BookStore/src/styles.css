@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+body{
+    margin:0;
+    padding:0;
+}

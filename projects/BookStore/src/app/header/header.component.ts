@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() {
-    console;.log("Test");
+    // tslint:disable-next-line:quotemark
+    console.log("Test");
    }
 
   ngOnInit() {
