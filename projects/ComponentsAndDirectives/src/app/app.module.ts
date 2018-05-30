@@ -9,6 +9,9 @@ import { CustomDirectiveExampleComponent } from './custom-directive-example/cust
 import { CustomDirectiveDirective } from './custom-directive-example/custom-directive-example.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ReversePipe } from './pipes/pipes.component';
+import { DirectivesTestComponent } from './directives-test/directives-test.component';
+import { DirectivesTestLabsDirective } from './directives-test-labs.directive';
+import { PipesLabsComponent } from './pipes-labs/pipes-labs.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ReversePipe } from './pipes/pipes.component';
     CustomDirectiveDirective,
     CustomDirectiveExampleComponent,
     PipesComponent,
-    ReversePipe
+    ReversePipe,
+    DirectivesTestComponent,
+    DirectivesTestLabsDirective,
+    PipesLabsComponent
   ],
   imports: [
     BrowserModule

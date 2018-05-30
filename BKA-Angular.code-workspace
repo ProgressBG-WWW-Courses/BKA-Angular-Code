@@ -5,10 +5,11 @@
 		}
 	],
 	"settings": {
-		"workbench.colorTheme": "Monokai",
+		"workbench.colorTheme": "Mariana Nord",
 		"tslint.autoFixOnSave": true,
 		"path-autocomplete.triggerOutsideStrings": true,
 		"cSpell.enabled": false,
-		"git.enabled": false
+		"git.enabled": false,
+		"tslint.enable": false
 	}
 }

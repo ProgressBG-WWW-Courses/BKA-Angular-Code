@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { DirectivesTestComponent } from './main/directives-test/directives-test.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductCartComponent } from './product-cart/product-cart.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { DirectivesTestComponent } from './main/directives-test/directives-test.
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    DirectivesTestComponent
+    DirectivesTestComponent,
+    ProductListComponent,
+    ProductCartComponent
   ],
   imports: [
     BrowserModule
