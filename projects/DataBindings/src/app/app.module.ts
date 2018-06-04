@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TemplateInterpolationComponent } from './template-interpolation/template-interpolation.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateInterpolationComponent
+    TemplateInterpolationComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule

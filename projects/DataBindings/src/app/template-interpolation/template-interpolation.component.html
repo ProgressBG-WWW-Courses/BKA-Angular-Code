@@ -1,7 +1,12 @@
-<h2>Angular Template Syntax</h2>
+<div [style.fontSize]="tmp">Angular Template Syntax</div>
+
+
 <ul>
-  <li>interpolate simple expression --->{{1+2*2}}</li>  
-  <li>interpolate class memeber as HTML content: --->{{name.toUpperCase()}}</li>
+  <li>interpolate simple expression ---></li>  
+  <li>interpolate class memeber as HTML content: --->{{toUpperName()}}</li>
+
+  <li (class)="note">interpolate class member as HTML attribute</li>
+  
   <li class="{{note}}">interpolate class member as HTML attribute</li>
   <li>interpolate class method --->{{greet("Ms.Byron")}}</li>
   <li (click)="colorInGreen()" class="{{note}}">interpolate event statement:colorInGreen() </li>

@@ -9,6 +9,13 @@ export class TemplateInterpolationComponent implements OnInit {
   note = "bg-red"
   name = "ada"
 
+
+  toUpperName(){
+    return this.name.toUpperCase();
+  }
+
+
+
   constructor() { }
 
   greet(userName){
