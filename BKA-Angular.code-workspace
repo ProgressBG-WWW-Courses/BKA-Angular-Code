@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"workbench.colorTheme": "Flatland Monokai",
+		"workbench.colorTheme": "Quiet Light",
 		"tslint.autoFixOnSave": true,
 		"path-autocomplete.triggerOutsideStrings": true,
 		"cSpell.enabled": false,
