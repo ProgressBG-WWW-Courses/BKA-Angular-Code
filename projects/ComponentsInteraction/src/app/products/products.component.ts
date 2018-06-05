@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsDataService} from '../products-data.service'
 
 @Component({
   selector: 'app-products',
@@ -8,26 +9,16 @@ import { Component, OnInit } from '@angular/core';
       <app-product *ngFor="let product of products" [productData]="product" (prdDeleteEvent)="prdDelete(product.name)"></app-product>
     </ul>  
   `,
-  styleUrls: []
+  styleUrls: []  
 })
 export class ProductsComponent implements OnInit {
-  products = [
-    {
-      "name": "apples",
-      "price": 2.50
-    },
-    {
-      "name": "oranges",
-      "price": 1.80
-    },
-    {
-      "name": "bananas",
-      "price": 2.00
-    }
-  ]
+  products = []
 
-  constructor() { }
-  ngOnInit() {}
+  constructor( private _products:ProductsDataService) { }
+
+  ngOnInit() {
+    this.products = this._products.getProducts()
+  }
 
   prdDelete(product){
     console.log("Deleting product: ", JSON.stringify(product))
