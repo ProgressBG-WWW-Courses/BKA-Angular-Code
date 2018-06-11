@@ -5,11 +5,12 @@
 		}
 	],
 	"settings": {
-		"workbench.colorTheme": "Kimbie Dark",
+		"workbench.colorTheme": "Visual Studio Light",
 		"tslint.autoFixOnSave": true,
 		"path-autocomplete.triggerOutsideStrings": true,
 		"cSpell.enabled": false,
 		"git.enabled": false,
-		"tslint.enable": false
+		"tslint.enable": false,
+		"editor.hover": false
 	}
 }

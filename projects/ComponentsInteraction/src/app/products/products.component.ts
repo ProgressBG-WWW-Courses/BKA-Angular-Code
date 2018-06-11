@@ -2,15 +2,20 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-products',
-  template: `
-    <h2>Products Component</h2>
-    <ul>
-      <app-product *ngFor="let product of products" [productData]="product" (prdDeleteEvent)="prdDelete(product.name)"></app-product>
-    </ul>
-    <hr>
-    <app-add-product (addProductEvent)="addProduct($event)"></app-add-product>  
-  `,
-  styleUrls: []
+  template:`    
+    <section>
+      <h2>Products Component</h2>
+      <ul>
+        <app-product 
+          *ngFor="let product of products" 
+          [productData]="product" 
+          (productDelete)="productDelete(product.name)">
+        </app-product>
+      </ul>
+      <hr>
+      <app-add-product (addProductEvent)="addProduct($event)"></app-add-product>  
+    </section>`,
+  styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
   products = [
@@ -31,13 +36,12 @@ export class ProductsComponent implements OnInit {
   constructor() { }
   ngOnInit() {}
 
-  prdDelete(product){
+  productDelete(product){
     console.log("Deleting product: ", JSON.stringify(product))
   }
 
   addProduct(e){
     console.log(e);
-    
     console.log("Product is going to be added")
   }
   

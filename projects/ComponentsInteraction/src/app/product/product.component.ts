@@ -9,22 +9,28 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
     </li>
   `,
   styles: [`
-    :host{
-      dislay:block;
-      border: 5px solid green;
-      background: red;
+    li{
+      display:block;
+      width: 80%;
+      border-bottom: 1px dotted gray;
+      margin: 1em 0;
+      // border: 5px solid green;
+      // background: red;
+    }
+    li>button{
+      float: right
     }
   `]
 })
 export class ProductComponent implements OnInit {
   @Input() productData;
-  @Output() prdDeleteEvent = new EventEmitter();
+  @Output() productDelete = new EventEmitter();
 
   ngOnInit() {
   }
 
-  delete(product){
-    this.prdDeleteEvent.emit("test");
+  delete(){
+    this.productDelete.emit("test");
   }
 
 }
