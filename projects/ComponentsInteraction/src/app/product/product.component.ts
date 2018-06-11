@@ -4,21 +4,27 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'app-product',
   template: `
     <li>
-      <span>{{product.name}}</span> - <span>{{product.price}}</span>
-      <button (click)="delete(product)">Delete</button>    
+      <span>{{productData.name}}</span> - <span>{{productData.price}}</span>
+      <button (click)="delete(productData)">Delete</button>    
     </li>
   `,
-  styleUrls: []
+  styles: [`
+    :host{
+      dislay:block;
+      border: 5px solid green;
+      background: red;
+    }
+  `]
 })
 export class ProductComponent implements OnInit {
-  @Input('productData') product;
+  @Input() productData;
   @Output() prdDeleteEvent = new EventEmitter();
 
   ngOnInit() {
   }
 
   delete(product){
-    this.prdDeleteEvent.emit(product);
+    this.prdDeleteEvent.emit("test");
   }
 
 }

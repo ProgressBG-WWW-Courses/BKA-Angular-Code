@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
     <h2>Products Component</h2>
     <ul>
       <app-product *ngFor="let product of products" [productData]="product" (prdDeleteEvent)="prdDelete(product.name)"></app-product>
-    </ul>  
+    </ul>
+    <hr>
+    <app-add-product (addProductEvent)="addProduct($event)"></app-add-product>  
   `,
   styleUrls: []
 })
@@ -32,5 +34,12 @@ export class ProductsComponent implements OnInit {
   prdDelete(product){
     console.log("Deleting product: ", JSON.stringify(product))
   }
+
+  addProduct(e){
+    console.log(e);
+    
+    console.log("Product is going to be added")
+  }
+  
 
 }
