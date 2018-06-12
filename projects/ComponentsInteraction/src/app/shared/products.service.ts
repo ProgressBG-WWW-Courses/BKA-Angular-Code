@@ -18,14 +18,17 @@ export class ProductsService {
   fetchProducts(){
     return [
       {
+        "id": 1,
         "name": "apples",
         "price": 2.50
       },
       {
+        "id": 2,
         "name": "oranges",
         "price": 1.80
       },
       {
+        "id": 3,
         "name": "bananas",
         "price": 2.00
       }

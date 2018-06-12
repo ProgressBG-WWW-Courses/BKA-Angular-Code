@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
       </ul>
       <hr>
       <app-add-product></app-add-product>  
+      <app-edit-product></app-edit-product>
     </section>`,
   styleUrls: ['./products.component.css']
 })
