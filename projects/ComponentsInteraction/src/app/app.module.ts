@@ -19,8 +19,7 @@ import { AddProductComponent } from './add-product/add-product.component';
   ],
   imports: [
     BrowserModule
-  ],
-  providers: [],
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
