@@ -4,7 +4,7 @@ import { ProductsService } from './../shared/products.service';
 @Component({
   selector: 'app-product',
   template: `
-    <li *ngFor="let product of products">
+    <li *ngFor="let product of getProducts()">
       <span>{{product.name}}</span> - <span>{{product.price}}</span>
       <button (click)="delete(product.name)">Delete</button>    
     </li>
@@ -25,7 +25,10 @@ export class ProductComponent{
   products;
 
   constructor( private _productsService:ProductsService ){
-    this.products = _productsService.fetchProducts()
+    
+  }
+  getProducts(){
+    return this._productsService.getProducts()
   }
 
   delete(name){

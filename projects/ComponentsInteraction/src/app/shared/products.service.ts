@@ -11,6 +11,10 @@ export class ProductsService {
     this.products = this.fetchProducts();
   }
 
+  getProducts(){
+    return this.products;
+  }
+
   fetchProducts(){
     return [
       {
