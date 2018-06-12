@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from './../shared/products.service';
 
+
 @Component({
   selector: 'app-product',
   template: `
@@ -33,6 +34,7 @@ export class ProductComponent{
 
   delete(name){
     this._productsService.deleteProduct(name)
+
   }
 
 }
