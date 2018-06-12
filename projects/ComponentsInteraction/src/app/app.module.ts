@@ -7,6 +7,7 @@ import { ChildComponent } from './child/child.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,11 @@ import { AddProductComponent } from './add-product/add-product.component';
     ProductsComponent,
     ProductComponent,
     AddProductComponent,
+    EditProductComponent,
   ],
   imports: [
     BrowserModule
-  ],
-  providers: [],
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

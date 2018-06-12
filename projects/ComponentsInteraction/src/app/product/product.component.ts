@@ -1,11 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProductsService } from './../shared/products.service';
 
 @Component({
   selector: 'app-product',
   template: `
-    <li>
-      <span>{{productData.name}}</span> - <span>{{productData.price}}</span>
-      <button (click)="delete(productData)">Delete</button>    
+    <li *ngFor="let product of getProducts()">
+      <span>{{product.name}}</span> - <span>{{product.price}}</span>
+      <button (click)="delete(product.name)">Delete</button>    
     </li>
   `,
   styles: [`
@@ -13,24 +14,25 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       display:block;
       width: 80%;
       border-bottom: 1px dotted gray;
-      margin: 1em 0;
-      // border: 5px solid green;
-      // background: red;
+      margin: 1em 0;     
     }
     li>button{
       float: right
     }
   `]
 })
-export class ProductComponent implements OnInit {
-  @Input() productData;
-  @Output() productDelete = new EventEmitter();
+export class ProductComponent{
+  products;
 
-  ngOnInit() {
+  constructor( private _productsService:ProductsService ){
+    
+  }
+  getProducts(){
+    return this._productsService.getProducts()
   }
 
-  delete(){
-    this.productDelete.emit("test");
+  delete(name){
+    this._productsService.deleteProduct(name)
   }
 
 }
