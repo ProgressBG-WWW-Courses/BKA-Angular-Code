@@ -1,0 +1,7 @@
+:host {
+    display: block;
+    border: 1px solid blue;
+}
+:host section{
+    display: none;
+}
