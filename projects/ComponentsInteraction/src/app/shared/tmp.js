@@ -1,17 +1,18 @@
 class DiselEngine{
-    constructor(hp){
-        this.hp = hp;
+    constructor(name){
+        this.name = name;
         this.start = false;
     }
 }
 class HybridEngine{
-    constructor(hp){
-        this.hp = hp;
+    constructor(name){
+        this.name = name;
         this.start = false;
         
     }
 }
 class Car{
+    // here we "inject" an engine object in order ot build our Car objects
     constructor(color, year, engine){
         this.color = color;
         this.year = year;
@@ -20,15 +21,16 @@ class Car{
     }
     start(){
         this.engine.start = true;
+        console.log(`The ${this.color} car was started with ${this.engine.name} engine!`)
     }
 }
 
-engine1 = new DiselEngine(100)
-engine2 = new HybridEngine(50)
+diselEngine = new DiselEngine("disel")
+hybridEngine = new HybridEngine("hybrid")
 
 
-let car1 = new Car("yellow", 2003, engine1);
-let car2 = new Car("green", 2018, engine2);
+let car1 = new Car("yellow", 2003, diselEngine);
+let car2 = new Car("green", 2018, hybridEngine);
 
 console.log( car1 )
 console.log( car2 )
