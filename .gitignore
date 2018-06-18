@@ -1,3 +1,5 @@
 **/node-modules/*
 **/node_modules/*
+!/dev_base/node_modules
+
 **/.private/*
