@@ -10,6 +10,7 @@ export class BooksService {
   // booksURL = 'https://raw.githubusercontent.com/ProgressBG-WWW-Courses/BKA-Angular-Code/RequestsAndObsevables/RequestsAndObsevables/src/assets/data/books.json';
   booksURL = 'http://localhost:4200/assets/data/books.json';
 
+
   constructor(private http: HttpClient) { }
 
   fetchBooks():Observable<IBook[]> {
