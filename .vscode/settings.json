@@ -1,0 +1,7 @@
+{
+    "editor.minimap.enabled": true,
+    "editor.parameterHints": false,
+    "editor.hover": false,
+    // "editor.action.showHover": false,
+    "git.enabled": false
+}
