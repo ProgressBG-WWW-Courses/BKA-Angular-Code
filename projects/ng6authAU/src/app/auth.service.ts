@@ -11,16 +11,16 @@ export class AuthService {
   constructor(private http: HttpClient) {
   }
 
-  login(email:string, password:string ) {
-    return this.http.post<User>('/api/login', {email, password})
+  login(email: string, password: string ) {
+    return this.http.post('/api/login', {email, password})
     .pipe(
       tap(res => this.setSession),
-      shareReplay();
-    )
+      shareReplay()
+    );
   }
 
   private setSession(authResult) {
-    const expiresAt = moment().add(authResult.expiresIn,'second');
+    const expiresAt = moment().add(authResult.expiresIn, 'second');
 
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );
