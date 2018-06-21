@@ -10,7 +10,7 @@ const app = express();
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use(bodyParser.json()); 
+app.use(bodyParser.json());
 
 app.use('/api', api);
 
@@ -21,3 +21,5 @@ app.use('/api', api);
 app.listen(port, function(){
     console.log("Server running on localhost:" + port);
 });
+
+app.list(3000, '0.0.0.0')
