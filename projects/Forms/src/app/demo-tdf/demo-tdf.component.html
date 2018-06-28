@@ -1,0 +1,29 @@
+<h1>Demo form</h1>
+<form #demoForm="ngForm">
+  <div ngModelGroup="userData">
+    <label for="">name: <input
+      #userName="ngModel"
+      [class.is-invalid]="userName.invalid && userName.touched"
+      required
+      name="userName"
+      type="text"
+      [(ngModel)]="demoModel1.userName">
+    </label>
+    <div *ngIf="userName.invalid && userName.touched">ERROR!</div>
+    <label for="">email:<input name="userEmail" type="mail" ngModel></label>
+  </div>
+</form>
+<!-- just for debug/demo purpose -->
+<h2>Trace</h2>
+<div>
+  <b>userName errors:</b>
+  {{userName.errors|json}}
+</div>
+<div>
+  <b>ngForm:</b>
+  {{demoForm.value|json}}
+</div>
+<div>
+  <b>demoModel:</b>
+  {{demoModel1|json}}
+</div>

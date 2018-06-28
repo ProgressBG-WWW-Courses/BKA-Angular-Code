@@ -1,7 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": "projects/Forms"
+		},
+		{
+			"path": "projects/reactive-forms-tutorial-master"
 		}
 	],
 	"settings": {
